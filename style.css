@@ -1,1 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
 
+body {
+  height: 200vh;
+}
+nav {
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: .3s;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+nav ul li a:hover {
+  /* text-decoration: underline; */
+  background-color: rgb(212, 210, 210);
+}
+
+.homescreen {
+  height: 100vh;
+}
