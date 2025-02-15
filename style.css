@@ -38,4 +38,12 @@ nav ul li a:hover {
 
 .homescreen {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homescreen h1 {
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
 }
