@@ -2,10 +2,12 @@
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   height: 200vh;
+  background-color: rgb(92, 106, 77);
 }
 nav {
   padding: 10px;
@@ -23,7 +25,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: rgb(0, 0, 0);
+  color: white;
   text-decoration: none;
   transition: .3s;
   padding: 3px;
@@ -33,7 +35,7 @@ nav ul li a {
 
 nav ul li a:hover {
   /* text-decoration: underline; */
-  background-color: rgb(212, 210, 210);
+  background-color: rgba(212, 210, 210, 0.256);
 }
 
 .homescreen {
@@ -41,9 +43,21 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .homescreen h1 {
   font-size: 5rem;
-  color: rgb(0, 0, 0);
+  color: white;
+  padding-bottom: 50px;
+}
+
+.homescreen p {
+  font-size: calc(1rem + 1vw);
+  color: white;
+}
+
+.homescreen .first {
+  padding-bottom: 50px;
 }
