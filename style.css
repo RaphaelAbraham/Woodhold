@@ -4,6 +4,7 @@
   --blanc: #e8e9f3;
   --brun: #955e42;
   --sec-vert: #285943;
+  --selection-color: #2859436f;
 }
 
 * {
@@ -13,7 +14,7 @@
 }
 
 *::selection {
-  background-color: var(--sec-vert);
+  background-color: var(--selection-color);
   color: var(--blanc);
 }
 
@@ -25,8 +26,9 @@ body {
 
 .wrapper {
   height: 100vh;
+  height: 100dvh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 nav ul li a {
@@ -64,21 +66,26 @@ nav {
 header {
   scroll-snap-align: start;
   height: 100vh;
-  /* height: 100dvh; */
+  height: 100dvh;
   position: relative;
   overflow-x: hidden;
 }
 
-header h1 {
+header .title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--noir);
-  font-size: clamp(3rem, 10vw, 10rem);
+  text-align: center;
 }
 
-header p {
+header .title h1 {
+  color: var(--noir);
+  font-size: clamp(3rem, 10vw, 10rem);
+  margin-bottom: 2rem;
+}
+
+header p.scrolldown {
   position: absolute;
   bottom: 2%;
   left: 50%;
@@ -87,8 +94,13 @@ header p {
   font-size: 1rem;
 }
 
+header .title p.desc {
+  color: var(--noir);
+  font-size: calc(0.6rem + 1vw);
+}
+
 header h1 .green {
-  background: linear-gradient(to bottom, var(--blanc) 49.9%, var(--vert) 50%);
+  background: linear-gradient(to bottom, rgba(255,255,255, 0) 49.9%, var(--vert) 50%);
 }
 
 /* header img {
@@ -105,7 +117,7 @@ header h1 .green {
 section#produit {
   scroll-snap-align: start;
   height: 100vh;
-  /* height: 100dvh; */
+  height: 100dvh;
   /* background: url(./images/blob-scene-png.png) no-repeat fixed center/cover; */
   background: var(--vert);
   display: flex;
@@ -138,6 +150,10 @@ section#produit div h2 {
   font-size: clamp(2rem, 5vw, 5rem);
 }
 
+section#produit div h2 span {
+  background: linear-gradient(to bottom, rgba(255,255,255, 0) 59.9%, var(--blanc) 40%);
+}
+
 section#produit div p {
   color: var(--noir);
   font-size: calc(1rem + 0.5vw);
@@ -146,8 +162,18 @@ section#produit div p {
 section#equipe {
   scroll-snap-align: start;
   height: 100vh;
-  /* height: 100dvh; */
+  height: 100dvh;
   background: var(--brun);
+  position: relative;
+}
+
+section#equipe h2 {
+  color: var(--blanc);
+  font-size: clamp(2rem, 5vw, 5rem);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Responsive */
