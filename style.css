@@ -64,7 +64,7 @@ nav {
 header {
   scroll-snap-align: start;
   height: 100vh;
-  height: 100dvh;
+  /* height: 100dvh; */
   position: relative;
   overflow-x: hidden;
 }
@@ -105,7 +105,7 @@ header h1 .green {
 section#produit {
   scroll-snap-align: start;
   height: 100vh;
-  height: 100dvh;
+  /* height: 100dvh; */
   /* background: url(./images/blob-scene-png.png) no-repeat fixed center/cover; */
   background: var(--vert);
   display: flex;
@@ -146,7 +146,7 @@ section#produit div p {
 section#equipe {
   scroll-snap-align: start;
   height: 100vh;
-  height: 100dvh;
+  /* height: 100dvh; */
   background: var(--brun);
 }
 
