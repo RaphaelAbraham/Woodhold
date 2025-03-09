@@ -57,6 +57,7 @@ nav {
 
 header {
   height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow-x: hidden;
 }
@@ -67,7 +68,7 @@ header h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--noir);
-  font-size: 3rem;
+  font-size: clamp(3rem, 10vw, 10rem);
 }
 
 header p {
@@ -83,17 +84,20 @@ header h1 .green {
   background: linear-gradient(to bottom, var(--blanc) 49.9%, var(--vert) 50%);
 }
 
-header img {
+/* header img {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 140vh;
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
   z-index: -1;
-}
+} */
 
 section#produit {
   height: 100vh;
+  height: 100dvh;
   /* background: url(./images/blob-scene-png.png) no-repeat fixed center/cover; */
   background: var(--vert);
   display: flex;
@@ -111,17 +115,35 @@ section#produit div {
 }
 
 section#produit img {
-  height: 90vh;
-  color: var(--noir);
-  font-size: 2rem;
+  max-width: 50%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 5px solid var(--sec-vert);
 }
 
 section#produit div h2 {
   color: var(--noir);
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 section#produit div p {
   color: var(--noir);
-  font-size: 2rem;
+  font-size: calc(1rem + 0.5vw);
+}
+
+@media (max-width: 1700px) {
+  section#produit img {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 840px) {
+  section#produit img {
+    aspect-ratio: 9/16;
+    border-radius: 30px;
+  }
 }
