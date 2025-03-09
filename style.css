@@ -23,6 +23,12 @@ body {
   transition: .5s;
 }
 
+.wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 nav ul li a {
   color: var(--noir);
   text-decoration: none;
@@ -56,6 +62,7 @@ nav {
 }
 
 header {
+  scroll-snap-align: start;
   height: 100vh;
   height: 100dvh;
   position: relative;
@@ -96,6 +103,7 @@ header h1 .green {
 } */
 
 section#produit {
+  scroll-snap-align: start;
   height: 100vh;
   height: 100dvh;
   /* background: url(./images/blob-scene-png.png) no-repeat fixed center/cover; */
@@ -134,6 +142,15 @@ section#produit div p {
   color: var(--noir);
   font-size: calc(1rem + 0.5vw);
 }
+
+section#equipe {
+  scroll-snap-align: start;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--brun);
+}
+
+/* Responsive */
 
 @media (max-width: 1700px) {
   section#produit img {
