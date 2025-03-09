@@ -83,6 +83,19 @@ header .title h1 {
   color: var(--noir);
   font-size: clamp(3rem, 10vw, 10rem);
   margin-bottom: 2rem;
+  position: relative;
+  background-color: var(--blanc);
+  
+}
+
+header .title h1::after {
+  content: '✨';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
 }
 
 header p.scrolldown {
