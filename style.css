@@ -21,6 +21,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: var(--blanc);
+  /* background: url(https://media.discordapp.net/attachments/1340422451863228426/1340422508368887908/EE0A9B76-010F-4329-9313-684D515A9149.jpg?ex=67cea57d&is=67cd53fd&hm=8f10a0e2ac7165abd6f9872285904420332095709cf7a5f6312afc768b43b327&=&format=webp&width=1536&height=2048) no-repeat fixed center/cover; */
   transition: .5s;
 }
 
@@ -84,7 +85,7 @@ header .title h1 {
   font-size: clamp(3rem, 10vw, 10rem);
   margin-bottom: 2rem;
   position: relative;
-  background-color: var(--blanc);
+  /* background-color: var(--blanc); */
   
 }
 
