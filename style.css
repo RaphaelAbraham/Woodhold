@@ -22,14 +22,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--blanc);
   /* background: url(https://media.discordapp.net/attachments/1340422451863228426/1340422508368887908/EE0A9B76-010F-4329-9313-684D515A9149.jpg?ex=67cea57d&is=67cd53fd&hm=8f10a0e2ac7165abd6f9872285904420332095709cf7a5f6312afc768b43b327&=&format=webp&width=1536&height=2048) no-repeat fixed center/cover; */
-  transition: 0.5s;
-}
-
-.wrapper {
-  height: 100vh;
-  height: 100dvh;
-  overflow-y: scroll;
-  /* scroll-snap-type: y proximity; */
+  /* transition: 0.5s; */
 }
 
 nav ul li a {
@@ -65,7 +58,6 @@ nav {
 }
 
 header {
-  scroll-snap-align: start;
   height: 100vh;
   height: 100dvh;
   position: relative;
@@ -132,7 +124,6 @@ header h1 .green {
 } */
 
 section#produit {
-  scroll-snap-align: start;
   height: 100vh;
   height: 100dvh;
   /* background: url(./images/blob-scene-png.png) no-repeat fixed center/cover; */
@@ -181,7 +172,6 @@ section#produit div p {
 }
 
 section#equipe {
-  scroll-snap-align: start;
   height: 100vh;
   height: 100dvh;
   background: var(--brun);
@@ -246,7 +236,7 @@ section#equipe .carrousel {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .slide.active {
@@ -261,6 +251,25 @@ section#equipe .carrousel {
   /* aspect-ratio: 1/1; */
   border-radius: 10%;
   /* border: 5px solid var(--sec-vert); */
+}
+
+footer {
+  height: 15vh;
+  height: 15dvh;
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Responsive */
@@ -283,10 +292,6 @@ section#equipe .carrousel {
 }
 
 @media (max-width: 600px) {
-  .wrapper {
-    scroll-snap-type: none;
-  }
-
   section#equipe .carrousel {
     height: 20rem !important;
     width: 20rem !important;
