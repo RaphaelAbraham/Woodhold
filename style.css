@@ -293,6 +293,13 @@ section#equipe .carrousel {
   }
 }
 
+@media (max-width: 600px) {
+  section#equipe .carrousel {
+    height: 15rem !important;
+    width: 15rem !important;
+  }
+}
+
 @media (max-height: 1020px) {
   section#equipe .carrousel {
     height: 30rem;
