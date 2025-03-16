@@ -112,6 +112,32 @@ header h1 .green {
   );
 }
 
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: black;
+  color: white; /* Texte en blanc */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-loop 10s linear infinite;
+}
+
+@keyframes marquee-loop {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
 /* header img {
   position: absolute;
   top: 50%;
