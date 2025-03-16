@@ -114,7 +114,7 @@ header h1 .green {
 
 .marquee {
   position: absolute;
-  top: 50px;
+  top: 55px;
   left: 0;
   width: 100%;
   overflow: hidden;
